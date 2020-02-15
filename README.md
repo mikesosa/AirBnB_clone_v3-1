@@ -213,7 +213,7 @@ github repo
 ## Authors
 
 * Michael Sosa, [@micael_sosa](
-* Diego Monrroy,
+* Diego Monroy,
 
 ## License
 
