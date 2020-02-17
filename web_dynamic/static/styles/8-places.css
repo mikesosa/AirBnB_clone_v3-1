@@ -63,7 +63,8 @@
 	border-bottom: 1px solid #DDDDDD;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .container .places .information .max_guest,

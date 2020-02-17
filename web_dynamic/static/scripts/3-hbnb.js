@@ -14,7 +14,7 @@ $(document).ready(function () {
     .then(res => {
       if (res.status === 'OK') {
         $('#api_status').addClass('available');
-        console.log(res);
+        // console.log(res);
       } else {
         $('#api_status').removeClass('available');
       }
@@ -29,9 +29,10 @@ $(document).ready(function () {
   })
     .then(res => res.json())
     .then(res => {
-      if (res.status === 'OK') {
+      console.log(res)
+      if (res) {
         // $('#api_status').addClass('available');
-        console.log(res);
+        // console.log(res);
         const title = '<ARTICLE><div class="title"><h2>';
         const price = '<div class="price_by_night">';
         const info = '<div class="information"><div class="max_guest"><i class="fa fa-users fa-3x" aria-hidden="true"></i><br />';
@@ -39,12 +40,12 @@ $(document).ready(function () {
         const bath = '<div class="number_bathrooms"><i class="fa fa-bath fa-3x" aria-hidden="true"></i><br />';
         const description = '<div class="description">';
         for (const place of res) {
-          $('places').append(
-            title + place.name + '</h2>',
-            price + place.price_by_night + '</div></div>',
-            info + place.max_guest + ' Guess</div>',
-            roomsNumber + place.number_rooms + ' Bedrooms</div>',
-            bath + place.number_bathrooms + ' Bathroom</div></div>',
+          $('.places').append(
+            title + place.name + '</h2>' +
+            price + place.price_by_night + '</div></div>' +
+            info + place.max_guest + ' Guess</div>' +
+            roomsNumber + place.number_rooms + ' Bedrooms</div>' +
+            bath + place.number_bathrooms + ' Bathroom</div></div>' +
             description + place.description + '</div></ARTICLE>'
           );
         }
