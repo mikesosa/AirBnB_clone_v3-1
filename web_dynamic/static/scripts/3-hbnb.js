@@ -19,7 +19,7 @@ $(document).ready(function () {
         $('#api_status').removeClass('available');
       }
     });
-/*
+
   fetch('http://0.0.0.0:5001/api/v1/places_search', {
     method: 'POST',
     headers: {
@@ -51,5 +51,5 @@ $(document).ready(function () {
       } else {
         console.log('Failed');
       }
-    }); */
+    });
 });
